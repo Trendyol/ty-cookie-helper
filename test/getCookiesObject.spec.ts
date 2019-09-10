@@ -1,24 +1,13 @@
-import { readCookie, getCookiesObject, createCookie, deleteCookie } from "../src/index";
-import { lorem, random } from "faker";
+import { getCookiesObject, createCookie } from "../src/index";
+import { random } from "faker";
+import { cookieDataFactory } from "./cookieDataFactory";
 
-const { word } = lorem;
 const { number } = random;
 
 interface ICookieData {
   name: string;
   value: string;
   days?: number;
-}
-
-const cookieDataFactory = (includeDays: boolean = false): ICookieData => {
-  const data: ICookieData = {
-    name: word(),
-    value: word()
-  }
-  if (includeDays) {
-    data.days = number({ min: 1, max: 9 })
-  }
-  return data;
 }
 
 describe("getCookiesObject", () => {
