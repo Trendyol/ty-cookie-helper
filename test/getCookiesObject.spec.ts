@@ -1,14 +1,9 @@
 import { getCookiesObject, createCookie } from "../src/index";
 import { random } from "faker";
+import { ICookieData } from "./interfaces";
 import { cookieDataFactory } from "./cookieDataFactory";
 
 const { number } = random;
-
-interface ICookieData {
-  name: string;
-  value: string;
-  days?: number;
-}
 
 describe("getCookiesObject", () => {
   const numberOfCookies = number({ min: 1, max: 15 });
