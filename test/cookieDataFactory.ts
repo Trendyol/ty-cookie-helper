@@ -1,8 +1,7 @@
 import { ICookieData } from "./interfaces";
-import { lorem, random } from "faker";
+import { random } from "faker";
 
-const { word } = lorem;
-const { number } = random;
+const { number, word } = random;
 
 export const cookieDataFactory = (includeDays: boolean = false): ICookieData => {
   const data: ICookieData = {

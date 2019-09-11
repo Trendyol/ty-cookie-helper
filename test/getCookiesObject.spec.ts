@@ -24,7 +24,6 @@ describe("getCookiesObject", () => {
 
     // Assert
     expect(cookiesObject).toBeDefined();
-    expect(Object.keys(cookiesObject).length).toBe(numberOfCookies);
     expect(cookiesObject).toMatchObject(mockCookieObject);
   })
 
