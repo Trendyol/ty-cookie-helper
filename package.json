@@ -1,5 +1,5 @@
 {
-  "name": "cookie-helper",
+  "name": "@trendyol/cookie-helper",
   "version": "1.0.0",
   "description": "simple cookie helper that provides CRUD functionalities",
   "main": "dist/index.js",
