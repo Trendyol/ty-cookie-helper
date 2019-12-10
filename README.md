@@ -1,6 +1,8 @@
 # cookie-helper
 simple cookie helper that provides functions to CRUD cookies
 
+`npm i @trendyol/cookie-helper`
+
 # How To Build
 
 `npm install`
