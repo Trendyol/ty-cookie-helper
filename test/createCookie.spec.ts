@@ -43,4 +43,18 @@ describe("createCookie", () => {
     expect(document.cookie).toBe(`${previousCookie}; ${cookieData.name}=${cookieData.value}`);
     expect(cookieResult).toBe(`${cookieData.name}=${cookieData.value}; path=/`)
   })
+
+  test("should create document.cookie with domain", () => {
+    // Arrange
+    const cookieDataArray: ICookieData[] = Array(1).fill(null).map(() => cookieDataFactory(false, true));
+    const cookieData = cookieDataArray[0];
+    const previousCookie = document.cookie;
+
+    // Act
+    const cookieResult = createCookie(cookieData.name, cookieData.value, cookieData.days, cookieData.domain);
+    console.log('cookieresult', cookieResult)
+
+    // Assert
+    expect(cookieResult).toBe(`${cookieData.name}=${cookieData.value}; path=/; domain=${cookieData.domain}`)
+  })
 });

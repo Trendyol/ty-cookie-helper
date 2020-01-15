@@ -12,7 +12,7 @@ export function getCookiesObject(cookies: string = document.cookie): object {
   return cookiesObject;
 }
 
-export function createCookie(name: string, value: string, days?: number): string {
+export function createCookie(name: string, value: string, days?: number, domain?: string): string {
   let expires = "";
 
   if (days) {
@@ -21,7 +21,10 @@ export function createCookie(name: string, value: string, days?: number): string
     expires = "; expires="+date.toUTCString();
   }
 
-  const cookie = `${name}=${value + expires}; path=/`;
+  let cookie = `${name}=${value + expires}; path=/`;
+  if (domain) {
+    cookie = `${cookie}; domain=${domain}`;
+  }
   document.cookie = cookie;
   return cookie;
 }
