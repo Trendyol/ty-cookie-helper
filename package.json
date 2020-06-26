@@ -13,7 +13,7 @@
     "cookies"
   ],
   "author": "Mehmet Sefa Balik",
-  "license": "ISC",
+  "license": "MIT",
   "files": [
     "dist/**/*"
   ],
