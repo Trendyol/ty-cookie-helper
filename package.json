@@ -1,6 +1,6 @@
 {
-  "name": "@trendyol/cookie-helper",
-  "version": "1.0.2",
+  "name": "@trendyol-js/cookie-helper",
+  "version": "1.0.4",
   "description": "simple cookie helper that provides CRUD functionalities",
   "main": "dist/index.js",
   "types": "dist/index.d.js",

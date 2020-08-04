@@ -1,7 +1,7 @@
 # cookie-helper
 simple cookie helper that provides functions to CRUD cookies
 
-`npm i @trendyol/cookie-helper`
+`npm i @trendyol-js/cookie-helper`
 
 ## create cookie
 `createCookie` function will create cookie as specified.
