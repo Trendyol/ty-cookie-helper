@@ -12,18 +12,29 @@ export function getCookiesObject(cookies: string = document.cookie): object {
   return cookiesObject;
 }
 
-export function createCookie(name: string, value: string, days?: number, domain?: string): string {
+export function createCookie(
+  name: string,
+  value: string,
+  days?: number,
+  domain?: string,
+  options?: { [key: string]: any }
+): string {
   let expires = "";
 
   if (days) {
     const date = new Date();
-    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-    expires = "; expires="+date.toUTCString();
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    expires = "; expires=" + date.toUTCString();
   }
 
   let cookie = `${name}=${value + expires}; path=/`;
   if (domain) {
     cookie = `${cookie}; domain=${domain}`;
+  }
+  if (options) {
+    Object.keys(options).forEach(
+      (key) => (cookie += `; ${key}=${options[key]}`)
+    );
   }
   document.cookie = cookie;
   return cookie;
