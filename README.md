@@ -1,3 +1,5 @@
+
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/Trendyol/ty-cookie-helper/badge)](https://scorecard.dev/viewer/?uri=github.com/Trendyol/ty-cookie-helper)
 # cookie-helper
 simple cookie helper that provides functions to CRUD cookies
 
